@@ -40,7 +40,12 @@ const Home = () => {
       </Box>
       <ImageOverlay mt={3} mb={3} />
       <Grid />
-      <Button variant="contained">Message me</Button>
+      <Button
+        variant="contained"
+        sx={{ position: "fixed", bottom: "2rem", right: "2rem" }}
+      >
+        Message me
+      </Button>
     </Box>
   );
 };
