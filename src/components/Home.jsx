@@ -3,10 +3,17 @@ import AppBar from "./AppBar";
 import Grid from "./Grid";
 import ImageOverlay from "./ImageOverlay";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 
 const Home = () => {
   return (
-    <Box sx={{ width: "100vw", margin: "0" }}>
+    <Box
+      sx={{
+        width: "100vw",
+        margin: "0",
+        backgroundColor: "Background: default",
+      }}
+    >
       <AppBar />
       <Box
         sx={{
@@ -33,6 +40,7 @@ const Home = () => {
       </Box>
       <ImageOverlay mt={3} mb={3} />
       <Grid />
+      <Button variant="contained">Message me</Button>
     </Box>
   );
 };

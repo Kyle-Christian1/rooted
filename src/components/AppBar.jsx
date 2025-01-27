@@ -10,7 +10,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import FilterVintageIcon from "@mui/icons-material/FilterVintage";
+import theme from "../theme";
 
 const pages = [
   "Work with me",
@@ -41,7 +41,11 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="sticky" top={0}>
+    <AppBar
+      sx={{ backgroundColor: "background.paper", color: "text.primary" }}
+      position="sticky"
+      top={0}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -62,7 +66,13 @@ function ResponsiveAppBar() {
             RWJ
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+              color: "inherit",
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -91,7 +101,11 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: "center" }}>{page}</Typography>
+                  <Typography
+                    sx={{ textAlign: "center", color: "text.primary" }}
+                  >
+                    {page}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -112,12 +126,18 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           ></Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              color: "inherit",
+            }}
+          >
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{ my: 2, color: "text.primary", display: "block" }}
               >
                 {page}
               </Button>
@@ -148,7 +168,9 @@ function ResponsiveAppBar() {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: "center" }}>
+                  <Typography
+                    sx={{ textAlign: "center", color: "text.primary" }}
+                  >
                     {setting}
                   </Typography>
                 </MenuItem>
