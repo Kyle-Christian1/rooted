@@ -42,6 +42,7 @@ const Home = () => {
       <Grid />
       <Button
         variant="contained"
+        size="large"
         sx={{ position: "fixed", bottom: "2rem", right: "2rem" }}
       >
         Message me
