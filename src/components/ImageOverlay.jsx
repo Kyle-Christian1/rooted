@@ -33,9 +33,7 @@ export default function TextOnImage() {
           textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)", // Add shadow for readability
           textAlign: "center",
         }}
-      >
-        Happiness exists.
-      </Typography>
+      ></Typography>
     </Box>
   );
 }
