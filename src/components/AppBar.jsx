@@ -14,6 +14,7 @@ import { NavLink, useNavigate } from "react-router";
 
 const pages = [
   { name: "Home", url: "/" },
+  { name: "About", url: "/about" },
   { name: "Coaching", url: "/coaching" },
   { name: "Event Planning", url: "/event-planning" },
   { name: "Personal Assistance", url: "/personal-assistance" },

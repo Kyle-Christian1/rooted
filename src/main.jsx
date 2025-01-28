@@ -5,11 +5,18 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme.js";
 import Home from "./components/Home";
 import ContactPage from "./components/ContactPage.jsx";
+import ErrorPage from "./components/ErrorPage.jsx";
+import AboutPage from "./components/AboutPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/about",
+    element: <AboutPage />,
   },
   {
     path: "/coaching",

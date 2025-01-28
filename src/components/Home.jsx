@@ -61,16 +61,102 @@ const Home = () => {
         </Typography>
       </Box>
       <Box mt={2} sx={{ flexGrow: 1 }}>
-        <Grid container columnGap={2}>
-          <Grid size={{ xs: 12, md: 4 }}>
-            <Item>
-              <ImageOverlay />
-            </Item>
+        <ImageOverlay />
+      </Box>
+
+      <Box mt={2} sx={{ flexGrow: 1, width: "100vw", textAlign: "center" }}>
+        <Grid
+          container
+          sx={{
+            "--Grid-borderWidth": "2px",
+            borderTop: "var(--Grid-borderWidth) solid",
+            borderLeft: "var(--Grid-borderWidth) solid",
+            borderColor: "divider",
+            "& > div": {
+              borderRight: "var(--Grid-borderWidth) solid",
+              borderBottom: "var(--Grid-borderWidth) solid",
+              borderColor: "divider",
+            },
+          }}
+        >
+          <Grid
+            item
+            size={{ xs: 12, md: 12 }}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundColor: "secondary.main",
+              height: "10rem",
+            }}
+          >
+            <Typography
+              variant="h4"
+              component="h2"
+              sx={{ color: "background.paper" }}
+            >
+              What I Specialize In
+            </Typography>
           </Grid>
-          <Grid size={{ xs: 12, md: 6 }}>
-            <Item>
-              <BasicGrid />
-            </Item>
+          <Grid
+            item
+            className="specialties"
+            size={{ xs: 12, md: 3 }}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundColor: "background.default",
+              height: "10rem",
+              color: "text.primary",
+            }}
+          >
+            Mindful Living
+          </Grid>
+          <Grid
+            item
+            className="specialties"
+            size={{ xs: 12, md: 3 }}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundColor: "background.default",
+              height: "10rem",
+              color: "text.primary",
+            }}
+          >
+            Healthier Homes
+          </Grid>
+          <Grid
+            item
+            className="specialties"
+            size={{ xs: 12, md: 3 }}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundColor: "background.default",
+              height: "10rem",
+              color: "text.primary",
+            }}
+          >
+            Balanced Homemaking
+          </Grid>
+          <Grid
+            item
+            className="specialties"
+            size={{ xs: 12, md: 3 }}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundColor: "background.default",
+              height: "10rem",
+              color: "text.primary",
+            }}
+          >
+            Event Planning & Virtual Personal Assistance
           </Grid>
         </Grid>
       </Box>
