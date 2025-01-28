@@ -42,7 +42,7 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar
-      sx={{ backgroundColor: "background.paper", color: "text.primary" }}
+      sx={{ backgroundColor: "#FFFFF0", color: "text.primary" }}
       position="sticky"
       top={0}
     >
@@ -62,9 +62,7 @@ function ResponsiveAppBar() {
               color: "inherit",
               textDecoration: "none",
             }}
-          >
-            RWJ
-          </Typography>
+          ></Typography>
 
           <Box
             sx={{
