@@ -1,5 +1,6 @@
 import { Divider, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import { useNavigate } from "react-router";
 
 import AppBar from "./AppBar";
 import Grid from "@mui/material/Grid2";
@@ -9,18 +10,24 @@ import Button from "@mui/material/Button";
 import BasicGrid from "./BasicGrid";
 import Paper from "@mui/material/Paper";
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-  ...theme.applyStyles("dark", {
-    backgroundColor: "#1A2027",
-  }),
-}));
-
 const Home = () => {
+  const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: "#fff",
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: "center",
+    color: theme.palette.text.secondary,
+    ...theme.applyStyles("dark", {
+      backgroundColor: "#1A2027",
+    }),
+  }));
+
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate("/contact");
+  };
+
   return (
     <Box
       sx={{
@@ -69,6 +76,7 @@ const Home = () => {
       </Box>
 
       <Button
+        onClick={handleButtonClick}
         variant="contained"
         size="large"
         sx={{
