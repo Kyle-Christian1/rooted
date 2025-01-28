@@ -1,27 +1,39 @@
 import { Divider, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { useNavigate } from "react-router";
-
 import AppBar from "./AppBar";
 import Grid from "@mui/material/Grid2";
 import ImageOverlay from "./ImageOverlay";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import BasicGrid from "./BasicGrid";
 import Paper from "@mui/material/Paper";
 
-const Home = () => {
-  const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: "#fff",
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-    ...theme.applyStyles("dark", {
-      backgroundColor: "#1A2027",
-    }),
-  }));
+const StyledGrid = styled(Grid)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: theme.palette.background.default,
+  color: theme.palette.text.primary,
+  height: "15rem",
+  paddingLeft: "1rem",
+  fontSize: "1.5rem",
+  wordWrap: "wrap",
+  paddingLeft: "3rem",
+  paddingRight: "3rem",
+}));
 
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: "#fff",
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: "center",
+  color: theme.palette.text.secondary,
+  ...theme.applyStyles("dark", {
+    backgroundColor: "#1A2027",
+  }),
+}));
+
+const Home = () => {
   const navigate = useNavigate();
 
   const handleButtonClick = () => {
@@ -77,6 +89,7 @@ const Home = () => {
               borderBottom: "var(--Grid-borderWidth) solid",
               borderColor: "divider",
             },
+            width: "100%",
           }}
         >
           <Grid
@@ -86,8 +99,8 @@ const Home = () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              height: "15rem",
               backgroundColor: "secondary.main",
-              height: "10rem",
             }}
           >
             <Typography
@@ -98,66 +111,18 @@ const Home = () => {
               What I Specialize In
             </Typography>
           </Grid>
-          <Grid
-            item
-            className="specialties"
-            size={{ xs: 12, md: 3 }}
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              backgroundColor: "background.default",
-              height: "10rem",
-              color: "text.primary",
-            }}
-          >
+          <StyledGrid item className="specialties" size={{ xs: 12, md: 3 }}>
             Mindful Living
-          </Grid>
-          <Grid
-            item
-            className="specialties"
-            size={{ xs: 12, md: 3 }}
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              backgroundColor: "background.default",
-              height: "10rem",
-              color: "text.primary",
-            }}
-          >
+          </StyledGrid>
+          <StyledGrid item className="specialties" size={{ xs: 12, md: 3 }}>
             Healthier Homes
-          </Grid>
-          <Grid
-            item
-            className="specialties"
-            size={{ xs: 12, md: 3 }}
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              backgroundColor: "background.default",
-              height: "10rem",
-              color: "text.primary",
-            }}
-          >
+          </StyledGrid>
+          <StyledGrid item className="specialties" size={{ xs: 12, md: 3 }}>
             Balanced Homemaking
-          </Grid>
-          <Grid
-            item
-            className="specialties"
-            size={{ xs: 12, md: 3 }}
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              backgroundColor: "background.default",
-              height: "10rem",
-              color: "text.primary",
-            }}
-          >
+          </StyledGrid>
+          <StyledGrid item className="specialties" size={{ xs: 12, md: 3 }}>
             Event Planning & Virtual Personal Assistance
-          </Grid>
+          </StyledGrid>
         </Grid>
       </Box>
 
