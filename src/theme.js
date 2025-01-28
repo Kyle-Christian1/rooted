@@ -3,17 +3,17 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#727D73", // Primary color
+      main: "#346186", // Primary color
     },
     secondary: {
-      main: "#AAB99A", // Secondary color
+      main: "#53798a", // Secondary color
     },
     background: {
-      default: "#D0DDD0", // Page background
-      paper: "#F0F0D7", // Background for cards or surfaces
+      default: "#fcf8f4", // Page background
+      paper: "#ffffff", // Background for cards or surfaces
     },
     text: {
-      primary: "#727D73", // Primary text color
+      primary: "#346186", // Primary text color
       secondary: "#AAB99A", // Secondary text color
     },
   },

@@ -10,14 +10,13 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import theme from "../theme";
 
 const pages = [
-  "Work with me",
-  "Products",
-  "Pricing",
-  "About me",
-  "Testimonials",
+  "Home",
+  "Coaching",
+  "Event Planning",
+  "Personal Assistance",
+  "Contact",
 ];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -42,7 +41,7 @@ function ResponsiveAppBar() {
 
   return (
     <AppBar
-      sx={{ backgroundColor: "#FFFFF0", color: "text.primary" }}
+      sx={{ backgroundColor: "background.paper", color: "text.primary" }}
       position="sticky"
       top={0}
     >
@@ -86,12 +85,12 @@ function ResponsiveAppBar() {
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: "bottom",
-                horizontal: "left",
+                horizontal: "right",
               }}
               keepMounted
               transformOrigin={{
                 vertical: "top",
-                horizontal: "left",
+                horizontal: "right",
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
@@ -128,6 +127,7 @@ function ResponsiveAppBar() {
             sx={{
               flexGrow: 1,
               display: { xs: "none", md: "flex" },
+              justifyContent: { xs: "none", md: "flex-end" },
               color: "inherit",
             }}
           >

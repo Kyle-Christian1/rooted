@@ -1,8 +1,13 @@
 body {
   margin: 0;
-  background-color: #d0ddd0;
+  background-color: #fcf8f4;
 }
 
-span {
+.home {
   font-family: "Dancing Script";
+  color: #346186;
+}
+
+.focus-words {
+  color: #346186;
 }
